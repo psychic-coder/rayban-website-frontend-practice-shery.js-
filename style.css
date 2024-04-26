@@ -1,0 +1,146 @@
+@font-face {
+    font-family: kajiro;
+    src: url(./font/Kajiro.ttf);
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+} 
+#main{
+    width:100%;
+    height:100vh;
+
+}
+#back{
+    width:100%;
+    height:100vh;
+
+
+}
+#back img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#top{
+ /* we made the pointer events none, */
+ /*on doing this , on clicking on the top layer of the page ,*/   
+ /* the clicks will not be received by the top and will be received by the bottom layer*/
+       pointer-events: none;
+        position:absolute;
+        top: 0;
+        left: 0;
+        width:100%;
+        height:100vh;
+}
+#workingarea{
+    position: relative;
+    margin: 0 auto;
+    width:80%;
+    height: 100vh;
+    max-width:1920px;
+   
+}
+#nav{
+ /*WE MADE THE POINTER EVENTS ALL IN THIS CASE,SO WE CAN PRESS THE 
+ NAVIGATION BAR ,PRESENT  IN THE TOP LAYER, EVEN AFTER WE MADE THE POINTER EVENTS NULL FOR THE TOP LAYER */   
+    pointer-events: all;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    padding: 40px 0;
+}
+#nav img{
+   height: 60px;
+}
+
+ #nleft,#nright{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+
+ }  
+#nav a{
+   color: #fff;
+   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+   text-decoration: none;
+   text-transform: uppercase;
+   font-size: 12px;
+   font-weight: 600;
+}
+#hero{
+    position:absolute;
+    top:50%;
+    left:0;
+    display: flex;
+    transform: translate(0%,-50%);
+    width:100%;
+
+    justify-content: space-between;
+
+}
+#heroleft{
+    min-width:50%;
+}
+#heroleft .elem{
+    position: relative;
+    height:9vw;
+    overflow: hidden;
+}
+#heroleft .elem h1:nth-child(1){
+    top:0;
+}
+#heroleft .elem h1{
+    position:absolute;
+    top: 100%;
+    left:0;
+    line-height: .9;
+    text-transform: capitalize;
+   font-family: kajiro;
+   color: #fff;
+   font-weight: 100;
+   font-size: 11vw;
+
+}
+#heroleft button{
+    pointer-events: all;
+    padding:.8vw 3vw;
+    font-size: 3vw;
+    margin-top: 2vw ;
+    font-family: kajiro;
+}
+
+#heroright{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width:17%;
+   color: #fff;
+}
+#heroright p{
+  text-align: right;
+  font-size: 14px;
+  font-weight: 300;
+}
+#heroright #imagediv{
+   width:100%;
+   height:170px;
+   margin-top:20px ;
+   margin-bottom: 30px;
+   background-image:url(https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) ;
+   background-position: center;
+   background-size: cover;
+
+}
+#heroright p:nth-child(3){
+     margin-bottom: 100px;
+}
